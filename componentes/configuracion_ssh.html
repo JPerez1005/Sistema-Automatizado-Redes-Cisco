@@ -1,0 +1,272 @@
+<!-- Contenido principal -->
+<div class="container mt-5">
+    <h1 class="mb-5">Configuracion SSH</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Contenido de la primera columna -->
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configuración para pc's
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo1">
+ipconfig <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección ip"> <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="mascara de subred"> <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección gateway">
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo1">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Contenido de la segunda columna -->
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configuración para switch 2960
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo2">
+enable
+configure terminal
+hostname <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre dispositivo">
+ip domain-name <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre de dominio">
+interface <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="Colocar aquí la interfaz">
+ip address <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección ip"> <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="mascara de subred">
+no shutdown
+exit
+ip default-gateway <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección gateway">
+exit
+write memory
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo2">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configuración para switch 3560
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo3">
+enable
+configure terminal
+hostname <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre dispositivo">
+ip domain-name <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre de dominio">
+interface <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="Colocar aquí la interfaz">
+no switchport
+ip address <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección ip"> <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="mascara de subred">
+no shutdown
+do write
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo3">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Crear cuentas
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Recordar</h5>
+                    <p>Se pueden crear muchas cuentas, pero se recomienda no salirse de la configuración, debido a que en la proxima sección se configura la encriptación.</p>
+                    <pre id="codigo4">
+username <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="nombre usuario"> privilege <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="15=más alto"> password <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="contraseña">
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo4">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configuración para el cifrado
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Atención</h5>
+                    <p>posiblemente le salga un mensaje, si quiere dejar todo por defecto de enter, si no quiere coloque un numero de longitud</p>
+                    <pre id="codigo5">
+crypto key generate rsa
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo5">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configurar VTY para aceptar el SSH
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Recordar</h5>
+                    <p>A partir de aquí se supone que ya puede conectarse a este dispositivo desde una computadora por comand prompt.</p>
+                    <pre id="codigo6">
+line vty 0 <input type="number" class="form-control form-control-sm d-inline w-25" placeholder="cantidad">
+password <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="contraseña">
+transport input ssh
+login local
+exit
+enable secret <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="contraseña"> 
+do write
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo6">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Entrar al swicht desde un pc
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Pasos</h5>
+                    <p>se va a mostrar el codigo para conectarse desde un pc</p>
+                    <pre id="codigo7">
+ssh -l <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="nombre usuario"> <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="ip del swicht a conectar">
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo7">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Verificar configuración de ssh
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Información</h5>
+                    <p>Aquí podremos ver algunas cuestiones, como ver si el SSH está activo, la versión que se está usando, tiempo maximo de autenticación, intentos en la autenticación, entre otras cosas con show run.</p>
+                    <pre id="codigo8">
+show ip ssh
+show run
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo8">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configurar el swicht en modo remoto
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5>Pasos</h5>
+                    <p>se va a mostrar el codigo para conectarse desde un pc</p>
+                    <pre id="codigo9">
+config t
+ip ssh time-out <input type="number" class="form-control form-control-sm d-inline w-50" placeholder="tiempo de espera"> 
+ip ssh authentication-retries <input type="number" class="form-control form-control-sm d-inline w-50" placeholder="cantidad de intentos">
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo9">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

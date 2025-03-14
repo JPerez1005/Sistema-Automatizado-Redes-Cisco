@@ -1,0 +1,173 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Configuracion basica
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo1">
+enable
+configure terminal
+hostname <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre consola">
+line console 0
+password  <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="contraseña">
+login
+logging synchronous
+exit
+service password-encryption
+no ip domain-lookup
+interface vlan <input type="number" class="form-control form-control-sm d-inline w-50" placeholder="numero de vlan">
+ip address <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="dirección ip"> <input type="text" class="form-control form-control-sm d-inline w-25" placeholder="mascara de subred">
+no shutdown
+do write
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo1">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Verificaciones
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo2">
+show ip interface brief
+show vlan
+do show vlan
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo2">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Crear vlan
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo3">
+vlan <input type="number" class="form-control form-control-sm d-inline w-50" placeholder="numero de vlan">
+name <input type="text" class="form-control form-control-sm d-inline w-50" placeholder="nombre vlan">
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo3">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Asignar puertos a vlan
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo4">
+interface range fa0/<input type="number" class="form-control form-control-sm d-inline w-25" placeholder="desde">-<input type="number" class="form-control form-control-sm d-inline w-25" placeholder="hasta">
+switchport mode access
+switchport access vlan <input type="number" class="form-control form-control-sm d-inline w-50" placeholder="a cual numero de vlan?">
+exit
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo4">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Enlace troncal
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo5">
+interface gi0/<input type="number" class="form-control form-control-sm d-inline w-25" placeholder="numero">
+switchport mode trunk
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo5">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-dark collapsed-card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Asignar troncal a vlan nativa
+                    </h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <pre id="codigo6">
+switchport trunk native vlan <input type="number" class="form-control form-control-sm d-inline w-25" placeholder="numero de vlan">
+exit
+                    </pre>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-dark copiar-btn" data-code="codigo6">
+                        Copiar código
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
