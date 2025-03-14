@@ -29,19 +29,19 @@ function cargarContenidoDesdeHash() {
     // Verificar qué hash está presente y cargar el archivo correspondiente
     switch (hash) {
         case "configuracion_ssh":
-            $("#main-content").load("../componentes/configuracion_ssh.html");
+            $("#main-content").load("https://jperez1005.github.io/Sistema-Automatizado-Redes-Cisco/componentes/configuracion_ssh.html");
             copiarCodigo();
             break;
         case "seguridad_de_puertos":
-            $("#main-content").load("../componentes/seguridad_de_puertos.html");
+            $("#main-content").load("https://jperez1005.github.io/Sistema-Automatizado-Redes-Cisco/componentes/seguridad_de_puertos.html");
             copiarCodigo();
             break;
         case "configuracion_basica_vlan":
-            $("#main-content").load("../componentes/configuracion_basica_vlan.html");
+            $("#main-content").load("https://jperez1005.github.io/Sistema-Automatizado-Redes-Cisco/componentes/configuracion_basica_vlan.html");
             copiarCodigo();
             break;
         case "enrutamiento":
-            $("#main-content").load("../componentes/enrutamiento.html");
+            $("#main-content").load("https://jperez1005.github.io/Sistema-Automatizado-Redes-Cisco/componentes/enrutamiento.html");
             copiarCodigo();
             break;
         default:
