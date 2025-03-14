@@ -17,7 +17,7 @@ d.addEventListener("DOMContentLoaded", () => {
 
 // Cargar componentes modulares
 $(function(){
-    $("#sidebar").load("componentes/sidebar.html");
+    $("#sidebar").load("../componentes/sidebar.html");
 });
 
 // Función para cargar el contenido dinámico
