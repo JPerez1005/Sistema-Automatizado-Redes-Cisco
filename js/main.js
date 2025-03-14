@@ -17,7 +17,7 @@ d.addEventListener("DOMContentLoaded", () => {
 
 // Cargar componentes modulares
 $(function(){
-    $("#sidebar").load("Sistema-Automatizado-Redes-Cisco/componentes/sidebar.html");
+    $("#sidebar").load("https://jperez1005.github.io/Sistema-Automatizado-Redes-Cisco/componentes/sidebar.html");
 });
 
 // Función para cargar el contenido dinámico
